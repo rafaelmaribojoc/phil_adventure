@@ -1,0 +1,490 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --text-color: rgb(5, 6, 5);
+  --background-color: rgb(247, 249, 247);
+  --primary-color: rgb(100, 155, 104);
+  --secondary-color: rgb(171, 206, 174);
+  --accent-color: rgb(124, 188, 130);
+  --h1-font-size: 5rem;
+  --h2-font-size: 1rem;
+  --logo-font-size: 1.3rem;
+  --paragraph-font-size: 0.5rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+*:not(.headline__heading--transparent)::selection,
+*:not(.headline__heading--transparent--black)::selection {
+  color: var(--background-color);
+  background-color: var(--accent-color);
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+header {
+  position: fixed;
+  z-index: 9;
+  background-color: var(--background-color);
+  width: 100%;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+svg {
+  width: 100%;
+  position: absolute;
+}
+
+/* NAVIGATION BAR SECTION */
+
+.nav__bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem 7rem;
+  color: var(--text-color);
+}
+
+.logo__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo__image {
+  width: 80px;
+  align-self: center;
+}
+
+.logo__text {
+  font-size: var(--logo-font-size);
+  align-self: center;
+  color: var(--text-color);
+}
+
+.logo__text:active {
+  color: var(--secondary-color);
+}
+
+.nav__container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+
+.nav__btn {
+  padding: 7px 9px;
+  border-radius: 5px;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: all 0.5s ease;
+}
+
+.nav__btn:hover,
+.nav__btn:active {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+
+/* HEADLINE SECTION */
+
+#headline-container {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/background-picture.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Paytone One", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+
+.headline__content-container {
+  text-align: center;
+}
+
+.headline__main-heading {
+  color: var(--background-color);
+  font-size: var(--h1-font-size);
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.headline__heading--transparent,
+.headline__heading--transparent--black {
+  color: transparent;
+  -webkit-text-stroke-color: rgb(247, 238, 238);
+  -webkit-text-stroke-width: 1px;
+}
+
+.headline__heading--transparent--black {
+  -webkit-text-stroke-color: rgb(58, 49, 49);
+}
+
+.headline__short-description {
+  font-size: 17px;
+  color: var(--background-color);
+  margin-top: 20px;
+  letter-spacing: 1px;
+  border-right: 5px solid;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(60, end) infinite, restart-typing 8s infinite,
+    cursor 0.6s infinite;
+  animation-delay: 12s;
+}
+
+.headline__explore-btn {
+  font-size: 20px;
+  display: inline-block;
+  margin: 110px auto 0 auto;
+  background-color: rgb(233, 233, 68);
+  box-shadow: 5px 5px 5px rgba(233, 233, 68, 0.4);
+  color: rgb(37, 36, 36);
+  padding: 4px 15px;
+  border-radius: 6px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.5s ease-in-out;
+}
+
+.headline__explore-btn:hover {
+  background-color: rgb(223, 223, 34);
+  box-shadow: 0 0 5px rgb(233, 233, 68), 0 0 25px rgb(233, 233, 68),
+    0 0 50px rgb(233, 233, 68), 0 0 100px rgb(233, 233, 68),
+    0 0 200px rgb(233, 233, 68);
+}
+
+/* DESTINATION SECTION */
+
+#destination__beaches-container,
+#destination__mountain-container,
+#destination__other-container {
+  padding: 1rem 7rem 4rem;
+  position: relative;
+  overflow: hidden;
+  width: 97%;
+  margin: auto;
+}
+
+.destination__mountain-container--dark {
+  background-color: rgb(17, 17, 17);
+}
+
+#destination__mountain-container .destination__card {
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+}
+
+.destination__heading-beaches,
+.destination__heading-mountain,
+.destination__heading-others,
+.contact__heading {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: underline wavy var(--primary-color);
+  margin: 70px;
+  font-size: 2.3rem;
+}
+
+.destination__heading-mountain {
+  text-decoration: underline 7px var(--primary-color);
+  color: var(--background-color);
+}
+
+.destination__heading-others {
+  text-decoration: underline overline 7px var(--primary-color);
+}
+
+.contact__heading {
+  text-decoration: underline double 7px var(--primary-color);
+  font-size: 1.5rem;
+}
+
+.destination__container {
+  display: flex;
+  flex-direction: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.5s ease-in-out;
+  gap: 79px;
+}
+
+.destination__card {
+  display: inline-block;
+  width: 400px;
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  background-color: rgb(255, 254, 254);
+  transition: all 0.2s linear;
+}
+
+.destination__card:hover {
+  transform: scale(1.02);
+}
+
+.destination__images {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.destination__data {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 50px;
+  padding-left: 20px;
+  width: 280px;
+}
+
+.destination__title {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.destination__description-container {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 60px;
+}
+
+.destination__btn,
+.destination__btn-mountain,
+.destination__btn-others {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.destination__btn:hover {
+  text-decoration: underline wavy var(--primary-color);
+}
+
+.destination__btn-mountain:hover {
+  text-decoration: underline 5px var(--primary-color);
+}
+
+.destination__btn-others:hover {
+  text-decoration: underline overline 4px var(--primary-color);
+}
+
+/* IMAGE SLIDER SECTION */
+
+.navigation {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+label {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+  border: 2px solid var(--primary-color);
+  transition: all 0.3s ease-in-out;
+}
+
+label:hover {
+  background-color: var(--primary-color);
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 79px;
+}
+
+input {
+  display: none;
+}
+
+#beaches-section1:checked ~ .slides,
+#mountain-section1:checked ~ .slides,
+#other-section1:checked ~ .slides {
+  transform: translateX(0%);
+}
+
+#beaches-section2:checked ~ .slides,
+#mountain-section2:checked ~ .slides,
+#other-section2:checked ~ .slides {
+  transform: translateX(-110%);
+}
+
+#beaches-section3:checked ~ .slides,
+#mountain-section3:checked ~ .slides,
+#other-section3:checked ~ .slides {
+  transform: translateX(-220%);
+}
+
+/* CONTACT SECTION */
+
+.contact__container {
+  padding: 8rem 7rem 1rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact__wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__button {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  background-color: rgb(255, 254, 254);
+  cursor: pointer;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.6s ease-out;
+  overflow: hidden;
+  font-weight: 700;
+}
+
+.contact__button:hover {
+  width: 200px;
+}
+
+.contact__button:nth-child(2),
+.contact__button:nth-child(3),
+.contact__button:nth-child(4),
+.contact__button:nth-child(5) {
+  margin-left: 60px;
+}
+
+.contact__icon {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  line-height: 60px;
+  text-align: center;
+}
+
+.contact__icon i {
+  font-size: 20px;
+  line-height: 60px;
+}
+
+.contact__icon span {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 60px;
+  margin-left: 10px;
+}
+
+.contact__button .facebook,
+.contact__button .facebook:visited,
+.contact__button .instagram,
+.contact__button .instagram:visited,
+.contact__button .email,
+.contact__button .email:visited,
+.contact__button .github,
+.contact__button .github:visited,
+.contact__button .linkedin,
+.contact__button .linkedin:visited {
+  color: var(--text-color);
+}
+
+.contact__button .facebook:hover,
+.contact__button .facebook:active {
+  color: rgb(48, 114, 255);
+}
+
+.contact__button .instagram:hover,
+.contact__button .instagram:active {
+  color: rgb(230, 28, 71);
+}
+
+.contact__button .linkedin:hover,
+.contact__button .linkedin:active {
+  color: rgb(8, 114, 184);
+}
+
+.contact__button .email:hover,
+.contact__button .email:active {
+  color: rgb(197, 34, 34);
+}
+
+.contact__button .github:hover,
+.contact__button .github:active {
+  color: rgb(62, 66, 62);
+}
+
+.contact__copyright {
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+/* Animations Section */
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 527.141px;
+  }
+}
+
+@keyframes restart-typing {
+  0%,
+  100% {
+    width: 0;
+  }
+
+  50% {
+    width: 527.141px;
+  }
+}
